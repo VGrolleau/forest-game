@@ -1,11 +1,14 @@
+const body = document.getElementById('section-body');
 const textElement = document.getElementById('text');
 const optionBtnsElement = document.getElementById('option-btns');
 
 let state = {};
+// body.style.background = "url('img/right-bg.jpg')";
 
 function startGame() {
     state = {};
     showTextNode(1);
+    body.style.background = "center center / cover url('img/forest-bg.jpg')";
 }
 
 function showTextNode(textNodeIndex) {
@@ -38,6 +41,17 @@ function selectOption(option) {
     }
     state = Object.assign(state, option.setState);
     showTextNode(nextTextNodeId);
+    console.log(option);
+
+    if ((option.nextText == 2) || (option.nextText == 3)) {
+        body.style.background = "center center / cover url('img/forest-bg.jpg')";
+    } else if (option.nextText == 4) {
+        body.style.background = "center center / cover url('img/right-bg.jpg')";
+    } else if (option.nextText == 5) {
+        body.style.background = "center center / cover url('img/left-with-bg.jpg')";
+    } else if (option.nextText == 6) {
+        body.style.background = "center center / cover url('img/left-without-bg.jpg')";
+    }
 }
 
 const textNodes = [{
