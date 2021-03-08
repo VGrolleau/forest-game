@@ -23,29 +23,41 @@ body {
 .container {
     width: 800px;
     max-width: 80%;
-    background: white;
+    background: rgba(255, 255, 255, .7);
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
 }
 
 .btn-grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 10px;
+    gap: 10px; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     margin-top: 20px;
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 
 .btn {
-    background: hsl(200, 100%, 50%);
-    border: 1px solid hsl(200, 100%, 30%);
+    background: rgb(90, 33, 0);
+    border: 1px solid rgb(121, 44, 0);
     border-radius: 5px;
     padding: 5px 10px;
     color: white;
     outline: none;
+    height: 44px;
+    margin-top: 10px;
+    transition: color 1s;
+    /* width: 311px; */
 }
 
 .btn:hover {
-    border: 1.5px solid black;
+    background: white;
+    border: 1px solid rgb(121, 44, 0);
+    color: rgb(90, 33, 0);
     cursor: pointer;
+    transition: color 1s;
 }
