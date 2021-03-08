@@ -30,15 +30,9 @@ body {
 }
 
 .btn-grid {
-    /* display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px; */
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     margin-top: 20px;
-    /* justify-content: space-between; */
-    /* align-items: center; */
 }
 
 .btn {
@@ -51,7 +45,6 @@ body {
     height: 44px;
     margin-top: 10px;
     transition: color 1s;
-    /* width: 311px; */
 }
 
 .btn:hover {
@@ -60,4 +53,19 @@ body {
     color: rgb(90, 33, 0);
     cursor: pointer;
     transition: color 1s;
+}
+
+@media only screen and (max-width: 750px) {
+    #section-body {
+        width: 100%;
+    }
+    .container {
+        margin: auto;
+    }
+    .btn-grid {
+        margin-top: 0;
+    }
+    .btn {
+        margin-top: 5px;
+    }
 }
